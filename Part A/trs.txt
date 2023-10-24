@@ -1,0 +1,41 @@
+Trs(q0, V) = q0q1
+Trs(q0, bghkmnpr) = qy
+Trs(q0, c) = qc
+Trs(q0, dwzyj) = qsa
+Trs(q0, s) = qs
+Trs(q0, t) = qt
+
+Trs(q0q1, V) = q0q1
+Trs(q0q1, bghkmnpr) = qy
+Trs(q0q1, c) = qc
+Trs(q0q1, dwzyj) = qsa
+Trs(q0q1, h) = None
+Trs(q0q1, n) = q0qy
+Trs(q0q1, s) = q1
+Trs(q0q1, t) = qt
+Trs(q0q1, y) = None
+
+Trs(q0qy, V) = q0q1
+Trs(q0qy, bghkmnpr) = qy
+Trs(q0qy, c) = qc
+Trs(q0qy, dwzyj) = qsa
+Trs(q0qy, h) = qy
+Trs(q0qy, n) = qy
+Trs(q0qy, s) = qs
+Trs(q0qy, t) = qt
+Trs(q0qy, y) = qsa
+
+Trs(q1, n) = q0
+
+Trs(qc, h) = qsa
+
+Trs(qs, V) = q0q1
+Trs(qs, h) = qsa
+
+Trs(qsa, V) = q0q1
+
+Trs(qt, V) = q0q1
+Trs(qt, s) = qsa
+
+Trs(qy, V) = q0q1
+Trs(qy, y) = qsa
