@@ -12,23 +12,116 @@ using namespace std;
 // --------- Two DFAs ---------------------------------
 
 // WORD DFA
-// Done by: **
+// Done by: ** James Meadows
 // RE:   **
 bool word(string s) {
 
     int state = 0;
     int charpos = 0;
     /* replace the following todo the word dfa  **
+    */
     while (s[charpos] != '\0')
       {
+        // From q0 -> q0
         if (state == 0 && s[charpos] == 'a')
-        state = 1;
+            state = 0;
         else
-        if (state == 1 && s[charpos] == 'b')
-        state = 2;
+        if (state == 0 && s[charpos] == 'e')
+            state = 0;
         else
-        if (state == 2 && s[charpos] == 'b')
-        state = 2;
+        if (state == 0 && s[charpos] == 'i')
+            state = 0;
+        else
+        if (state == 0 && s[charpos] == 'o')
+            state = 0;
+        else
+        if (state == 0 && s[charpos] == 'u')
+            state = 0;
+        else
+        // From q0 -> qc
+        if (state == 0 && s[charpos] == 'c')
+            state = 2;
+        else
+        // From q0 -> qs
+        if (state == 0 && s[charpos] == 's')
+            state = 3;
+        else
+        // From q0 -> qy
+        if (state == 0 && s[charpos] == 'b')
+            state = 4;
+        else
+        if (state == 0 && s[charpos] == 'g')
+            state = 4;
+        else
+        if (state == 0 && s[charpos] == 'h')
+            state = 4;
+        else
+        if (state == 0 && s[charpos] == 'k')
+            state = 4;
+        else
+        if (state == 0 && s[charpos] == 'm')
+            state = 4;
+        else
+        if (state == 0 && s[charpos] == 'n')
+            state = 4;
+        else
+        if (state == 0 && s[charpos] == 'p')
+            state = 4;
+        else
+        if (state == 0 && s[charpos] == 'r')
+            state = 4;
+        else
+        // q0 -> qsa
+        if (state == 0 && s[charpos] == 'd')
+            state = 5;
+        else
+        if (state == 0 && s[charpos] == 'w')
+            state = 5;
+        else
+        if (state == 0 && s[charpos] == 'z')
+            state = 5;
+        else
+        if (state == 0 && s[charpos] == 'y')
+            state = 5;
+        else
+        if (state == 0 && s[charpos] == 'j')
+            state = 5;
+        else
+        // q0 -> qt
+        if (state == 0 && s[charpos] == 't')
+            state = 6;
+        else
+        // qc -> qsa
+        if (state == 2 && s[charpos] == 'h')
+            state = 5;
+        else
+        // qs -> qsa
+        if (state == 3 && s[charpos] == 'h')
+            state = 5;
+        else
+        // qy -> qsa
+        if (state == 4 && s[charpos] == 'y')
+            state = 5;
+        else
+        // qt -> qsa
+        if (state == 5 && s[charpos] == 's')
+            state = 6;
+        else
+        // qsa -> q0
+        if (state == 5 && s[charpos] == 'a')
+            state = 0;
+        else
+        if (state == 5 && s[charpos] == 'e')
+            state = 0;
+        else
+        if (state == 5 && s[charpos] == 'i')
+            state = 0;
+        else
+        if (state == 5 && s[charpos] == 'o')
+            state = 0;
+        else
+        if (state == 5 && s[charpos] == 'u')
+            state = 0;
         else
             return(false);
         charpos++;
@@ -37,7 +130,6 @@ bool word(string s) {
     // where did I end up????
     if (state == 2) return(true);  // end in a final state
      else return(false);
-    */
 }
 
 // PERIOD DFA
